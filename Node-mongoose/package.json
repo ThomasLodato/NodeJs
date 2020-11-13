@@ -8,5 +8,8 @@
     "start": "node index"
   },
   "author": "Thomas Lodato",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.1.7"
+  }
 }
