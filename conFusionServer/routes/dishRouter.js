@@ -183,7 +183,7 @@ dishRouter.route('/:dishId/comments/:commentId')
 	.then((dish) => {
 		if (dish != null && dish.comments.id(req.params.commentId) != null) {
 			if (dish.comments.id(req.params.commentId).author.toString() != req.user._id.toString()){
-				err = new Error('You are not authorized to edit this comment');
+				err = new Error('You are not authorized to edit this comment, only the user that created the comment can edit this comment!');
 				err.status = 403;
 				return next(err);
 			}
